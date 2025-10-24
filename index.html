@@ -3,50 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Что такое ГИС?</title>
+    <title>Географические информационные системы (ГИС)</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             color: #333;
+            background-color: #f5f7fa;
+            padding: 20px;
         }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
         h1 {
-            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 10px;
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .intro {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #555;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #4a6491;
+            padding-bottom: 10px;
             margin-bottom: 20px;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background-color: white;
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .image-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-caption {
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .applications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .app-card {
+            background: #f0f4f8;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            border-left: 4px solid #4a6491;
+        }
+        
+        .app-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Что такое ГИС?</h1>
-        <p>
-            ГИС (геоинформационная система) — это технология для сбора, хранения, анализа, 
-            визуализации и управления пространственными (географическими) данными. 
-            ГИС позволяет связывать информацию с конкретными местоположениями на Земле, 
-            что помогает принимать обоснованные решения в таких областях, как урбанистика, 
-            экология, транспорт, сельское хозяйство, чрезвычайные ситуации и многих других.
-        </p>
-        <p>
-            Примеры известных ГИС: ArcGIS, QGIS, Google Earth, Яндекс.Карты.
-        </p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/GIS_technology_components.svg/800px-GIS_technology_components.svg.png" 
-             alt="Схема компонентов ГИС">
-        <p><em>Источник изображения: Wikimedia Commons</em></p>
+        <header>
+            <h1>Географические информационные системы (ГИС)</h1>
+            <p class="subtitle">Технологии для анализа и визуализации пространственных данных</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro">
+                <p>ГИС — это системы сбора, хранения, анализа и визуализации географических данных и связанной с ними информации о необходимых объектах.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Что такое ГИС?</h2>
+                <p>Географическая информационная система (ГИС) — это система, предназначенная для сбора, хранения, обработки, анализа, управления и представления пространственно-координированных данных.</p>
+                
+                <div class="image-grid">
+                    <div class="image-card">
+                        <img src="КД.png">
+                        <div class="image-caption">ГИС позволяет визуализировать данные на картах</div>
+                    </div>
+                    <div class="image-card">
+                        <img src="АПД.jpg">
+                        <div class="image-caption">Анализ пространственных данных помогает принимать решения</div>
+                    </div>
+                    <div class="image-card">
+                        <img src="3dinGIS.jpg">
+                        <div class="image-caption">Современные ГИС поддерживают 3D-моделирование</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Основные компоненты ГИС</h2>
+                <ul>
+                    <li><strong>Аппаратное обеспечение</strong> — компьютеры, устройства ввода/вывода, GPS-оборудование</li>
+                    <li><strong>Программное обеспечение</strong> — специализированные ГИС-приложения (ArcGIS, QGIS и др.)</li>
+                    <li><strong>Данные</strong> — пространственные и атрибутивные данные о географических объектах</li>
+                    <li><strong>Пользователи</strong> — специалисты, работающие с системой</li>
+                    <li><strong>Методы</strong> — процедуры и технологии анализа данных</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Области применения ГИС</h2>
+                <div class="applications">
+                    <div class="app-card">
+                        <h3>Городское планирование</h3>
+                        <p>Анализ застройки территорий, планирование инфраструктуры, зонирование</p>
+                    </div>
+                    <div class="app-card">
+                        <h3>Экология</h3>
+                        <p>Мониторинг состояния окружающей среды, анализ изменения ландшафтов</p>
+                    </div>
+                    <div class="app-card">
+                        <h3>Транспорт</h3>
+                        <p>Планирование маршрутов, логистика, анализ транспортных потоков</p>
+                    </div>
+                    <div class="app-card">
+                        <h3>Сельское хозяйство</h3>
+                        <p>Точное земледелие, мониторинг состояния посевов, планирование работ</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Преимущества использования ГИС</h2>
+                <ul>
+                    <li>Улучшенное принятие решений на основе пространственного анализа</li>
+                    <li>Эффективное управление ресурсами и планирование</li>
+                    <li>Улучшенная коммуникация за счет наглядной визуализации данных</li>
+                    <li>Сохранение и систематизация географических данных</li>
+                    <li>Автоматизация процессов сбора и обработки пространственной информации</li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 Введение в географические информационные системы</p>
+        </footer>
     </div>
 </body>
 </html>
